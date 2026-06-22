@@ -33,7 +33,7 @@
 
   services.power-profiles-daemon.enable = true;
 
-  services.upower.enable
+  services.upower.enable = true;
 
   nixpkgs.overlays = [
     (final: prev: {
