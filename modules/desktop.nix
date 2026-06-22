@@ -33,6 +33,8 @@
 
   services.power-profiles-daemon.enable = true;
 
+  services.upower.enable
+
   nixpkgs.overlays = [
     (final: prev: {
       nautilus = prev.nautilus.overrideAttrs (nprev: {
