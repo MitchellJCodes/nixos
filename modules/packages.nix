@@ -64,7 +64,8 @@
     gnome-disk-utility
 
     # Gaming
-    wine
+    wineWow64Packages.stable
+    winetricks
     protonplus
     lutris-free
     goverlay
