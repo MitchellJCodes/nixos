@@ -11,7 +11,7 @@
   };
 
   # ROG Control Center
-  programs.rog-control-center.enable = true;
+  #programs.rog-control-center.enable = true;
   #programs.rog-control-center.autoStart = true;  
 
   # KDE Connect
