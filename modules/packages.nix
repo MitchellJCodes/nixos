@@ -69,6 +69,7 @@
     protonplus
     lutris-free
     goverlay
+    mangohud
     gamescope
     gamemode
 
