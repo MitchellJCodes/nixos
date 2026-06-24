@@ -2,11 +2,16 @@
 
 {
   # Flatpak
-  # Remember to check Flathub instructions
   services.flatpak.enable = true;
 
+  # Appimage support
+  programs.appimage = {
+  enable = true;
+  binfmt = true;
+  };
+
   # ROG Control Center
-  #programs.rog-control-center.enable = true;
+  programs.rog-control-center.enable = true;
   #programs.rog-control-center.autoStart = true;  
 
   # KDE Connect
@@ -19,7 +24,7 @@
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.login.enableGnomeKeyring = true;
   
-    # Allow Unfree Repository
+  # Allow Unfree Repository
   nixpkgs.config.allowUnfree = true;
 
   # Auto Optimise store
