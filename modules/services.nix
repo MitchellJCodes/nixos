@@ -22,6 +22,12 @@
     # Allow Unfree Repository
   nixpkgs.config.allowUnfree = true;
 
+  # Auto Optimise store
+  nix.settings.auto-optimise-store = true;
+  
+  # 7 Day Garbage collection
+  nix.gc.automatic = true;
+
   # Enable Flakes and Nix commands
   nix.settings.experimental-features = [
     "nix-command"
