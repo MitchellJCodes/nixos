@@ -50,7 +50,6 @@
     # Utilities
     localsend
     xwayland-satellite
-    gparted
 
     # GNOME Apps
     bazaar
