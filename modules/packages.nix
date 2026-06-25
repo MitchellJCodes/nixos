@@ -41,7 +41,6 @@
 
     # Shell
     starship
-    zoxide
     xdg-user-dirs
 
     # Noctalia
