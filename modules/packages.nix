@@ -1,6 +1,9 @@
 { pkgs, noctalia, ... }:
 
 {
+  # Firefox
+  programs.firefox.enable = true;
+  
   environment.systemPackages = with pkgs; [
     # Desktop
     gnome-session
@@ -14,9 +17,6 @@
     git
     helix
     
-    # Browsers
-    firefox
-
     # Terminal
     ghostty
 
@@ -49,7 +49,7 @@
     # Utilities
     localsend
     xwayland-satellite
-
+    
     # GNOME Apps
     bazaar
     showtime
