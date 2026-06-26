@@ -78,9 +78,6 @@
     signal-desktop
     vesktop
 
-    # System
-    snapper
-
     # Browser Integration
     pywalfox-native
 
