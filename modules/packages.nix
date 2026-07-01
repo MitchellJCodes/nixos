@@ -28,7 +28,6 @@
     fzf
     resvg
     imagemagick
-
     
     # Terminal
     ghostty
