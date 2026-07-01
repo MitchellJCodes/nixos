@@ -21,7 +21,7 @@
 
     autoLogin = {
       enable = true;
-      user = "";
+      user = "<USER>";
     };
   };
 
