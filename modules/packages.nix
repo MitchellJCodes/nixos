@@ -3,19 +3,32 @@
 {
   # Firefox
   programs.firefox.enable = true;
-  
+
   environment.systemPackages = with pkgs; [
     # Desktop
     gnome-session
     sddm-astronaut
 
     # CLI
+    wl-clipboard
     eza
     btop
     yazi
+    file
     fastfetch
     git
     helix
+    ripgrep
+    ffmpeg
+    rar
+    p7zip
+    jq
+    poppler
+    fd
+    fzf
+    resvg
+    imagemagick
+
     
     # Terminal
     ghostty
@@ -42,14 +55,16 @@
     # Shell
     starship
     xdg-user-dirs
-
+    zoxide
+    
     # Noctalia
     noctalia.packages.${pkgs.system}.default
 
     # Utilities
     localsend
     xwayland-satellite
-    
+    gnome-calculator
+  
     # GNOME Apps
     bazaar
     showtime
@@ -76,8 +91,7 @@
 
     # Communication
     signal-desktop
-    vesktop
-
+    
     # Browser Integration
     pywalfox-native
 
