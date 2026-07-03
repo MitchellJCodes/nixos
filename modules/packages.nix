@@ -85,6 +85,9 @@
     gamescope
     gamemode
 
+    # Reading
+    kdePackages.okular
+
     # Audio
     audacity
 
