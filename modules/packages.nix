@@ -35,6 +35,7 @@
     # Files
     nautilus
     sushi
+    file-roller
 
     # Theme / Fonts
     inter
