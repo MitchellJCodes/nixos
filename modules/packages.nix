@@ -4,6 +4,9 @@
   # Firefox
   programs.firefox.enable = true;
 
+  # Thunderbird
+  programs.thunderbird.enable = true;
+
   environment.systemPackages = with pkgs; [
     # Desktop
     gnome-session
@@ -28,14 +31,14 @@
     fzf
     resvg
     imagemagick
-    
+            
     # Terminal
     ghostty
 
     # Files
     nautilus
-    sushi
     file-roller
+    sushi
 
     # Theme / Fonts
     inter
