@@ -17,9 +17,14 @@
     noctalia = {
       url = "github:noctalia-dev/noctalia/cachix";
     };
+
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, noctalia, ... }: {
+  outputs = { self, nixpkgs, noctalia, lanzaboote, ... }: {
     nixosConfigurations."nixos-btw" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
@@ -28,6 +33,7 @@
       };
 
       modules = [
+        lanzaboote.nixosModules.lanzaboote
         ./configuration.nix
       ];
     };
