@@ -13,6 +13,7 @@
     sddm-astronaut
 
     # CLI
+    sbctl
     wl-clipboard
     eza
     btop
