@@ -47,4 +47,9 @@
     amdgpuBusId = "PCI:101:0:0";
     nvidiaBusId = "PCI:1:0:0";
   };
+
+  # OBS support
+  programs.obs-studio.package = pkgs.obs-studio.override {
+    cudaSupport = true;
+  };
 }
