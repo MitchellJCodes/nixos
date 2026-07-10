@@ -8,8 +8,8 @@
     modesetting.enable = true;
 
     # Nvidia power management
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
+    powerManagement.enable = true;
+    powerManagement.finegrained = true;
 
     # Open kernel module
     open = true;
