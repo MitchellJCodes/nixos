@@ -7,6 +7,20 @@
   # Thunderbird
   programs.thunderbird.enable = true;
 
+  # OBS-Studio
+  programs.obs-studio = {
+  enable = true;
+
+  plugins = with pkgs.obs-studio-plugins; [
+    wlrobs
+    obs-backgroundremoval
+    obs-pipewire-audio-capture
+    obs-gstreamer
+    obs-vkcapture
+    ];
+  };
+
+  # General Packages
   environment.systemPackages = with pkgs; [
     # Desktop
     gnome-session
@@ -22,7 +36,6 @@
     fastfetch
     git
     helix
-    clang
     ripgrep
     ffmpeg
     rar
