@@ -22,6 +22,7 @@
     fastfetch
     git
     helix
+    clang
     ripgrep
     ffmpeg
     rar
