@@ -8,6 +8,8 @@
     ./modules/secureboot.nix
     ./modules/users.nix
     ./modules/networking.nix
+    ./modules/firefox.nix
+    ./modules/thunderbird.nix
     ./modules/desktop.nix
     ./modules/audio.nix
     ./modules/gaming.nix
