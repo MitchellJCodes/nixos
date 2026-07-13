@@ -17,6 +17,7 @@
     ./modules/services.nix
     #./modules/nvidia.nix
     #./modules/rog.nix
+    #./modules/virt-manager.nix
   ];
 
   system.stateVersion = "26.05";
