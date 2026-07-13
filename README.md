@@ -1,8 +1,29 @@
-My NixOS configuration is made to work with my dotfiles. It uses the NixOS Unstable brach, and supports noctalia V5, as does my dotfiles. The configuration supports system configuration, networking, gaming, email and other usefull desktop software.
+My personal NixOS configuration, designed to work alongside my dotfiles. It targets the **NixOS Unstable** branch and includes support for **Noctalia V5**. The configuration provides a complete desktop setup, including system configuration, networking, gaming, email, and a variety of other desktop applications.
 
+### Preview
 
-Preview using my dotfiles:
-<img width="2560" height="1440" alt="Pasted image" src="https://github.com/user-attachments/assets/3c198471-18dc-4b1b-8ab8-f340b32e5f8a" />
+Using my dotfiles:
 
+<img width="2560" height="1440" alt="Desktop preview" src="https://github.com/user-attachments/assets/3c198471-18dc-4b1b-8ab8-f340b32e5f8a" />
 
-To install my configuration, clone the repository and change the luks boot device in modules/boot.nix, to the installed device, and change the username in flake.nix, which has the place holder <USER>. Finally, run sudo Nixos-rebuild switch --flake /etc/nixos#nixos-btw and enjoy!
+## Installation
+
+1. Clone this repository:
+
+   ```sh
+   git clone https://github.com/mitchelljcodes/nixos 
+   ```
+
+2. Edit `modules/boot.nix` and set the LUKS boot device for your system.
+
+3. Edit `flake.nix` and replace `<USER>` with your username.
+
+4. Copy the new configuration to `/etc/nixos`
+
+5. Rebuild the system:
+
+   ```sh
+   sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw
+   ```
+
+Enjoy!
