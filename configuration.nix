@@ -16,6 +16,7 @@
     ./modules/packages.nix
     ./modules/services.nix
     #./modules/nvidia.nix
+    #./modules/rog.nix
   ];
 
   system.stateVersion = "26.05";
