@@ -30,6 +30,7 @@
 
       specialArgs = {
         inherit noctalia;
+        username = "mitch";
       };
 
       modules = [
