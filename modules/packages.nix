@@ -1,12 +1,6 @@
 { pkgs, noctalia, ... }:
 
 {
-  # Firefox
-  programs.firefox.enable = true;
-
-  # Thunderbird
-  programs.thunderbird.enable = true;
-
   # OBS-Studio
   programs.obs-studio = {
   enable = true;
@@ -82,6 +76,7 @@
     localsend
     xwayland-satellite
     gnome-calculator
+    system-config-printer
   
     # GNOME Apps
     bazaar
