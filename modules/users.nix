@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 
 {
-  users.users.<USER> = {
+  users.users.${username}= {
     isNormalUser = true;
-    description = "<USER>";
+    description = username;
 
     extraGroups = [
       "networkmanager"
