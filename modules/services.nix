@@ -1,6 +1,18 @@
 { ... }:
 
 {
+  # Printing
+  services.printing = {
+  enable = true;
+  webInterface = true;
+  };
+  
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
   # Flatpak
   services.flatpak.enable = true;
 
@@ -11,8 +23,7 @@
   };
 
   # ROG Control Center
-  #programs.rog-control-center.enable = true;
-  #programs.rog-control-center.autoStart = true;  
+  programs.rog-control-center.enable = true;
 
   # KDE Connect
   programs.kdeconnect.enable = true;
