@@ -15,6 +15,7 @@
     ./modules/gaming.nix
     ./modules/packages.nix
     ./modules/services.nix
+
     #./modules/nvidia.nix
     #./modules/rog.nix
     #./modules/virt-manager.nix
