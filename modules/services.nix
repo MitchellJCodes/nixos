@@ -22,9 +22,6 @@
   binfmt = true;
   };
 
-  # ROG Control Center
-  programs.rog-control-center.enable = true;
-
   # KDE Connect
   programs.kdeconnect.enable = true;
 
