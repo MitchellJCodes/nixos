@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 
 {
   services.xserver.xkb = {
@@ -21,7 +21,7 @@
 
     autoLogin = {
       enable = true;
-      user = "<USER>";
+      user = username;
     };
   };
 
