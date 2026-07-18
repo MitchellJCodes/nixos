@@ -17,10 +17,6 @@
 
     initrd = {
       verbose = false;
-
-      # Add any LUKS device below
-      luks.devices."luks-########-####-####-####-############".device =
-       "/dev/disk/by-uuid/########-####-####-####-############";
     };
 
     kernelParams = [
