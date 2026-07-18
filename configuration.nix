@@ -6,6 +6,7 @@
 
     ./modules/boot.nix
     #./modules/secureboot.nix
+    ./modules/swap.nix
     ./modules/users.nix
     ./modules/networking.nix
     ./modules/firefox.nix
