@@ -14,13 +14,11 @@ Using my dotfiles:
    git clone https://github.com/mitchelljcodes/nixos 
    ```
 
-2. Edit `modules/boot.nix` and set the LUKS boot device for your system.
+2. Edit `flake.nix` and replace `USERNAME` with your username.
 
-3. Edit `flake.nix` and replace `<USER>` with your username.
+3. Copy the new configuration to `/etc/nixos`
 
-4. Copy the new configuration to `/etc/nixos`
-
-5. Rebuild the system:
+4. Rebuild the system:
 
    ```sh
    sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw
