@@ -54,6 +54,7 @@
     nerd-fonts.jetbrains-mono
     bibata-cursors
     adwaita-icon-theme
+    papirus-icon-theme
     adwaita-fonts
 
     noto-fonts
