@@ -50,6 +50,7 @@
     sushi
 
     # Theme / Fonts
+    glib
     inter
     nerd-fonts.jetbrains-mono
     bibata-cursors
