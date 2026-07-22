@@ -44,6 +44,9 @@
   # Polkit
   security.polkit.enable = true;
 
+  # Dconf (Gnome)
+  programs.dconf.enable = true;
+
   # GNOME Keyring
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.login.enableGnomeKeyring = true;
