@@ -54,7 +54,7 @@
     inter
     nerd-fonts.jetbrains-mono
     bibata-cursors
-    adwaita-icon-theme
+    # adwaita-icon-theme
     papirus-icon-theme
     adwaita-fonts
 
