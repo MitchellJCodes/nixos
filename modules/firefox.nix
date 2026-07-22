@@ -62,7 +62,32 @@ in
         SkipOnboarding = true;
       };
 
-      # Extensions
+      # Firefox Suggestions
+      FirefoxSuggest = {
+      WebSuggestions = false;
+      SponsoredSuggestions = false;
+      ImproveSuggest = false;
+      };
+
+      # Autofill
+      AutofillAddressEnabled = false;
+      AutofillCreditCardEnabled = false;
+
+      # Preferences
+      programs.firefox.preferences = {
+      "browser.urlbar.suggest.quicksuggest" = false;
+      "browser.urlbar.quicksuggest.enabled" = false;
+      "browser.urlbar.quicksuggest.dataCollection.enabled" = false;
+    
+      "browser.search.suggest.enabled" = false;
+    
+      "browser.discovery.enabled" = false;
+    
+      "browser.newtabpage.activity-stream.feeds.topsites" = false;
+      "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
+      };
+
+          # Extensions
       ExtensionSettings = builtins.listToAttrs [
         (extension "ublock-origin"
           "uBlock0@raymondhill.net")
