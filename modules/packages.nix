@@ -49,21 +49,10 @@
     file-roller
     sushi
 
-    # Theme / Fonts
-    glib
-    inter
-    nerd-fonts.jetbrains-mono
+    # Theme
     bibata-cursors
     adwaita-icon-theme
-    adwaita-fonts
-
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-cjk-serif
-    noto-fonts-color-emoji
-
-    liberation_ttf
-    corefonts
+    papirus-icon-theme
 
     # Shell
     starship
@@ -90,19 +79,9 @@
     localsearch
     gnome-disk-utility
 
-    # Gaming
-    wineWow64Packages.stable
-    winetricks
-    protonplus
-    lutris-free
-    goverlay
-    mangohud
-    gamescope
-    gamemode
-
     # Office
     kdePackages.okular
-    onlyoffice-desktopeditors
+    libreoffice-fresh
 
     # Audio
     audacity
@@ -120,7 +99,6 @@
     fishPlugins.hydro
     fishPlugins.grc
 
-    fzf
     grc
   ];
 }
