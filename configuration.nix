@@ -12,6 +12,7 @@
     ./modules/firefox.nix
     ./modules/thunderbird.nix
     ./modules/desktop.nix
+    ./modules/fonts.nix
     ./modules/audio.nix
     ./modules/gaming.nix
     ./modules/packages.nix
