@@ -1,5 +1,5 @@
 {
-  description = "Noctalia Shell";
+  description = "My Nixos Configuration";
 
   nixConfig = {
     extra-substituters = [
@@ -23,15 +23,28 @@
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    dotfiles = {
+      url = "github:mitchelljcodes/dotfiles";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, noctalia, lanzaboote, ... }: {
+  outputs = {
+    self,
+    nixpkgs,
+    noctalia,
+    lanzaboote,
+    dotfiles,
+    ...
+  }: {
     nixosConfigurations."nixos-btw" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
       specialArgs = {
-        inherit noctalia;
-        username = "USERNAME";
+        inherit noctalia dotfiles;
+
+        username = "mitch";
       };
 
       modules = [
