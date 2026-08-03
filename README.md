@@ -13,9 +13,9 @@ Using my dotfiles:
 
 1. Clone this repository:
 
-   ```sh
-   git clone https://github.com/mitchelljcodes/nixos 
-   ```
+```sh
+git clone https://github.com/mitchelljcodes/nixos 
+```
 
 2. Edit `flake.nix` and replace `USERNAME` with your username.
 
@@ -23,13 +23,13 @@ Using my dotfiles:
 
 4. Rebuild the system:
 
-   ```sh
-   sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw
-   ```
+```sh
+sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw
+```
    
 On the first rebuild, this configuration will automatically clone and install my dotfiles. If you ever want to force a reinstall or update, run:
-   ```sh
-   nix-update --dotfiles
-   ```
+```sh
+nix-update --dotfiles
+```
 
 Enjoy!
