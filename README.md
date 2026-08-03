@@ -1,4 +1,3 @@
-[!NOTE]
 Now automatically installs my dotfiles! 🎉
 
 My personal NixOS configuration, designed to work alongside my dotfiles. It targets the **NixOS Unstable** branch and includes support for **Noctalia V5**. The configuration provides a complete desktop setup, including system configuration, networking, gaming, email, and a variety of other desktop applications.
