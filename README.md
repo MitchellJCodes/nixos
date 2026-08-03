@@ -26,7 +26,7 @@ git clone https://github.com/mitchelljcodes/nixos
 4. Rebuild the system:
 
 ```sh
-sudo nixos-rebuild switch --flake /etc/nixos#HOSTNAME
+sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw
 ```
    
 On the first rebuild, this configuration will automatically clone and install my dotfiles. If you ever want to force a reinstall or update, run:
