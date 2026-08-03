@@ -1,11 +1,9 @@
 
 ### Preview
 
-Using my dotfiles:
+🎉 Now automatically installs my dotfiles! 🎉
 
 <img width="2560" height="1440" alt="Desktop preview" src="https://github.com/user-attachments/assets/3c198471-18dc-4b1b-8ab8-f340b32e5f8a" />
-
-🎉 Now automatically installs my dotfiles! 🎉
 
 My personal NixOS configuration, designed to work alongside my dotfiles. It targets the **NixOS Unstable** branch and includes support for **Noctalia V5**. The configuration provides a complete desktop setup, including system configuration, networking, gaming, email, and a variety of other desktop applications.
 
