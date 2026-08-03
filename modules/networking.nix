@@ -1,8 +1,8 @@
-{ ... }:
+{ hostname, ... }:
 
 {
   networking = {
-    hostName = "hostname";
+    hostName = hostname;
 
     networkmanager = {
       enable = true;
@@ -38,8 +38,6 @@
 
       DNSOverTLS = "true";
       DNSSEC = "allow-downgrade";
-
-      # Use these resolvers for all domains.
       Domains = [ "~." ];
     };
   };
