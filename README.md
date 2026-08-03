@@ -1,3 +1,6 @@
+[!NOTE]
+Now automatically installs my dotfiles! 🎉
+
 My personal NixOS configuration, designed to work alongside my dotfiles. It targets the **NixOS Unstable** branch and includes support for **Noctalia V5**. The configuration provides a complete desktop setup, including system configuration, networking, gaming, email, and a variety of other desktop applications.
 
 ### Preview
@@ -22,6 +25,11 @@ Using my dotfiles:
 
    ```sh
    sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw
+   ```
+   
+On the first rebuild, this configuration will automatically clone and install my dotfiles. If you ever want to force a reinstall or update, run:
+   ```sh
+   nix-update --dotfiles
    ```
 
 Enjoy!
