@@ -44,7 +44,8 @@
       specialArgs = {
         inherit noctalia dotfiles;
 
-        username = "mitch";
+        username = "USERNAME";
+        hostname = "HOSTNAME";
       };
 
       modules = [
