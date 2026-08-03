@@ -45,7 +45,7 @@
         inherit noctalia dotfiles;
 
         username = "USERNAME";
-        hostname = "HOSTNAME";
+        hostname = "nixos-btw";
       };
 
       modules = [
