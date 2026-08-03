@@ -2,7 +2,7 @@
 
 {
   networking = {
-    hostName = "nixos-btw";
+    hostName = "hostname";
 
     networkmanager = {
       enable = true;
