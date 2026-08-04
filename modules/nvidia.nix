@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # ROG Control Center
-  # programs.rog-control-center.enable = true;
-
   # Nvidia Settings
   hardware.nvidia = {
     # Modesetting is required.
