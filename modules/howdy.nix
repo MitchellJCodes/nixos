@@ -1,6 +1,10 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    linux-enable-ir-emitter
+  ];
+
   services.howdy = {
     enable = true;
     control = "sufficient";
@@ -12,7 +16,7 @@
       };
 
       video = {
-        # device_path = "/dev/video0";
+        device_path = "/dev/video2";
       };
     };
   };
