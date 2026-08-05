@@ -5,7 +5,6 @@
     ./hardware-configuration.nix
 
     ./modules/boot.nix
-    #./modules/secureboot.nix
     ./modules/swap.nix
     ./modules/users.nix
     ./modules/networking.nix
@@ -24,6 +23,7 @@
     #./modules/virt-manager.nix
 
     #./modules/howdy.nix
+    #./modules/secureboot.nix
   ];
 
   system.stateVersion = "26.05";
