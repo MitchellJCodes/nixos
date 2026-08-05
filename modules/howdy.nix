@@ -1,9 +1,7 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    linux-enable-ir-emitter
-  ];
+  services.linux-enable-ir-emitter.enable = true;
 
   services.howdy = {
     enable = true;
