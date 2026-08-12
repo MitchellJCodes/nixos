@@ -1,11 +1,9 @@
 { ... }:
 
 let
-  extension = shortId: id: {
+  extension = id: {
     name = id;
     value = {
-      install_url =
-        "https://addons.mozilla.org/firefox/downloads/latest/${shortId}/latest.xpi";
       installation_mode = "force_installed";
     };
   };
@@ -27,20 +25,21 @@ in
       # Browser
       DontCheckDefaultBrowser = true;
       DisableProfileImport = true;
- 
+
       # Search
-      SearchEngines = {
-        Default = "DuckDuckGo";
-      };
+      SearchEngines.Default = "DuckDuckGo";
 
       # Security
-      HTTPSOnlyMode = "enabled";
+      HttpsOnlyMode = "enabled";
       EnableTrackingProtection = {
         Value = true;
         Locked = true;
         Cryptomining = true;
         Fingerprinting = true;
       };
+
+      # Keep cookies, but isolate third-party cookies
+      Cookies.Behavior = "partition-foreign";
 
       # New tab
       FirefoxHome = {
@@ -53,7 +52,7 @@ in
         Snippets = false;
       };
 
-      # Mozilla promotions
+      # Mozilla recommendations/promotions
       UserMessaging = {
         ExtensionRecommendations = false;
         FeatureRecommendations = false;
@@ -62,48 +61,42 @@ in
         SkipOnboarding = true;
       };
 
-      # Firefox Suggestions
+      # Suggestions
       FirefoxSuggest = {
-      WebSuggestions = false;
-      SponsoredSuggestions = false;
-      ImproveSuggest = false;
+        WebSuggestions = false;
+        SponsoredSuggestions = false;
+        ImproveSuggest = false;
       };
 
       # Autofill
       AutofillAddressEnabled = false;
       AutofillCreditCardEnabled = false;
 
-      # Preferences
-      programs.firefox.preferences = {
+      # Uncomment if you don't use Firefox Sync.
+      # DisableFirefoxAccounts = true;
+
+      ExtensionSettings = builtins.listToAttrs [
+        (extension "uBlock0@raymondhill.net")
+        (extension "{446900e4-71c2-419a-a7a6-df9c091e268b}")
+        (extension "addon@darkreader.org")
+        (extension "sponsorBlocker@ajay.app")
+        (extension "pywalfox@frewacom.org")
+        (extension "{88ebde3a-4581-4c6b-8019-2a05a9e3e938}")
+      ];
+    };
+
+    # Preferences are outside `policies`.
+    preferences = {
       "browser.urlbar.suggest.quicksuggest" = false;
       "browser.urlbar.quicksuggest.enabled" = false;
       "browser.urlbar.quicksuggest.dataCollection.enabled" = false;
-    
       "browser.search.suggest.enabled" = false;
-    
       "browser.discovery.enabled" = false;
-    
       "browser.newtabpage.activity-stream.feeds.topsites" = false;
       "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
-      };
 
-          # Extensions
-      ExtensionSettings = builtins.listToAttrs [
-        (extension "ublock-origin"
-          "uBlock0@raymondhill.net")
-
-        (extension "bitwarden-password-manager"
-          "{446900e4-71c2-419f-a6a7-df9c091e268b}")
-
-        (extension "darkreader"
-          "addon@darkreader.org")
-
-        (extension "sponsorblock"
-          "sponsorBlocker@ajay.app")
-
-        (extension "pywalfox"
-          "pywalfox@frewacom.org")
-      ];
+      # Optional: stronger anti-fingerprinting, but can break websites.
+      # "privacy.resistFingerprinting" = true;
     };
   };
 }
