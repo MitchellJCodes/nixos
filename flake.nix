@@ -19,6 +19,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    noctalia-greeter = {
+      url = "github:noctalia-dev/noctalia-greeter";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,13 +39,14 @@
     self,
     nixpkgs,
     noctalia,
+    noctalia-greeter,
     lanzaboote,
     dotfiles,
     ...
   }:
   let
     hostname = "nixos-btw";
-    username = "USERNAME";
+    username = "mitch";
   in {
     nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -55,6 +61,7 @@
 
       modules = [
         lanzaboote.nixosModules.lanzaboote
+        noctalia-greeter.nixosModules.default
         ./configuration.nix
       ];
     };
