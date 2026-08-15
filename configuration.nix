@@ -10,6 +10,7 @@
     ./modules/networking.nix
     ./modules/firefox.nix
     ./modules/thunderbird.nix
+    ./modules/greeter.nix
     ./modules/desktop.nix
     ./modules/dotfiles.nix
     ./modules/fonts.nix
@@ -18,12 +19,12 @@
     ./modules/packages.nix
     ./modules/services.nix
 
-    #./modules/nvidia.nix
-    #./modules/rog.nix
-    #./modules/virt-manager.nix
+   # ./modules/nvidia.nix
+   # ./modules/rog.nix
+   # ./modules/virt-manager.nix
 
-    #./modules/howdy.nix
-    #./modules/secureboot.nix
+   # ./modules/howdy.nix
+   # ./modules/secureboot.nix
   ];
 
   system.stateVersion = "26.05";
