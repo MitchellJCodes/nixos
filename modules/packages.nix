@@ -61,12 +61,15 @@
     
     # Noctalia
     noctalia.packages.${pkgs.system}.default
+    seatd
+    elogind
 
     # Utilities
     localsend
     xwayland-satellite
     gnome-calculator
     system-config-printer
+    electrum
   
     # GNOME Apps
     bazaar
@@ -81,7 +84,7 @@
 
     # Office
     kdePackages.okular
-    libreoffice-fresh
+    onlyoffice-desktopeditors
 
     # Audio
     audacity
