@@ -3,60 +3,42 @@
 {
   # Printing
   services.printing = {
-  enable = true;
-  webInterface = true;
-  };
-  
-  services.avahi = {
     enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
+    webInterface = true;
   };
 
   # Flatpak
   services.flatpak.enable = true;
+
   systemd.services.flatpak-repo = {
-  description = "Add Flathub Flatpak repository";
+    description = "Add Flathub Flatpak repository";
 
-  after = [ "network-online.target" ];
-  wants = [ "network-online.target" ];
-  wantedBy = [ "multi-user.target" ];
+    after = [ "network-online.target" ];
+    wants = [ "network-online.target" ];
+    wantedBy = [ "multi-user.target" ];
 
-  path = [ pkgs.flatpak ];
+    path = [ pkgs.flatpak ];
 
-  script = ''
-    flatpak remote-add --if-not-exists \
-      flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-  '';
+    script = ''
+      flatpak remote-add --if-not-exists \
+        flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+    '';
 
-  serviceConfig.Type = "oneshot";
+    serviceConfig.Type = "oneshot";
   };
 
-  # Appimage support
+  # AppImage
   programs.appimage = {
-  enable = true;
-  binfmt = true;
+    enable = true;
+    binfmt = true;
   };
 
-  # KDE Connect
-  programs.kdeconnect.enable = true;
-
-  # Polkit
-  security.polkit.enable = true;
-
-  # Dconf (Gnome)
-  programs.dconf.enable = true;
-
-  # GNOME Keyring
-  services.gnome.gnome-keyring.enable = true;
-  security.pam.services.login.enableGnomeKeyring = true;
-  
   # Allow Unfree Repository
   nixpkgs.config.allowUnfree = true;
 
   # Auto Optimise store
   nix.settings.auto-optimise-store = true;
-  
+
   # 7 Day Garbage collection
   nix.gc.automatic = true;
 
