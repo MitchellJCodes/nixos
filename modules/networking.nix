@@ -18,6 +18,14 @@
     };
   };
 
+  # Network service discovery / mDNS
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+  # DNS
   services.resolved = {
     enable = true;
 
