@@ -1,58 +1,45 @@
-{ pkgs, username, ... }:
+{ pkgs, ... }:
 
-let
-  sddm-astronaut-custom = pkgs.sddm-astronaut.override {
-    themeConfig = {
-      Background = "Backgrounds/sddm-bg.jpg";
-    };
-  };
-in
 {
+  # Desktop / session
+  programs.niri.enable = true;
+
+  # LocalSearch/TinySPARQL require this in the systemd user environment
+  # when running the Niri session through greetd/Noctalia Greeter.
+  systemd.user.settings.Manager = {
+    DefaultEnvironment = "XDG_SESSION_CLASS=user";
+  };
+
+  # X11 keyboard configuration
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
 
-  environment.systemPackages = [
-    sddm-astronaut-custom
-  ];
+  # Desktop integration
+  services.gvfs.enable = true;
+  programs.dconf.enable = true;
 
-  services.displayManager = {
-    sddm = {
-      enable = true;
+  # GNOME services used by desktop applications
+  services.gnome.gnome-keyring.enable = true;
+  services.gnome.tinysparql.enable = true;
+  services.gnome.localsearch.enable = true;
 
-      wayland.enable = true;
-
-      theme = "sddm-astronaut-theme";
-
-      extraPackages = [
-        sddm-astronaut-custom
-      ];
-
-      settings = {
-        Theme = {
-          CursorTheme = "Bibata-Modern-Ice";
-          CursorSize = 24;
-        };
-      };
-    };
-
-    autoLogin = {
-      enable = true;
-      user = username;
-    };
+  security.pam.services = {
+    login.enableGnomeKeyring = true;
+    greetd.enableGnomeKeyring = true;
   };
 
-  programs.niri.enable = true;
+  # Desktop authentication / connectivity
+  security.polkit.enable = true;
+  programs.kdeconnect.enable = true;
 
-  services.gvfs.enable = true;
-
+  # Hardware / power
   hardware.bluetooth.enable = true;
-
   services.power-profiles-daemon.enable = true;
-
   services.upower.enable = true;
 
+  # XDG portals
   xdg.portal = {
     enable = true;
 
@@ -62,28 +49,4 @@ in
       xdg-desktop-portal-gtk
     ];
   };
-
-  nixpkgs.overlays = [
-    (final: prev: {
-      sddm-astronaut = prev.sddm-astronaut.overrideAttrs (old: {
-        postInstall = ''
-          chmod -R u+w $out/share/sddm/themes/sddm-astronaut-theme
-
-          mkdir -p $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds
-
-          cp ${./assets/sddm-bg.jpg} \
-            $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/sddm-bg.jpg
-        '';
-      });
-
-      nautilus = prev.nautilus.overrideAttrs (nprev: {
-        buildInputs =
-          nprev.buildInputs
-          ++ (with pkgs.gst_all_1; [
-            gst-plugins-good
-            gst-plugins-bad
-          ]);
-      });
-    })
-  ];
 }
