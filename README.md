@@ -9,10 +9,6 @@ My personal NixOS configuration, designed to work alongside my dotfiles. It targ
 
 ## Installation
 
-```sh
-bash <(curl -fsSL https://raw.githubusercontent.com/MitchellJCodes/nixos/main/install.sh)
-```
-
 1. Clone this repository:
 
 ```sh
