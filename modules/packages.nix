@@ -69,7 +69,7 @@
     xwayland-satellite
     gnome-calculator
     system-config-printer
-    electrum
+    nwg-displays
   
     # GNOME Apps
     bazaar
