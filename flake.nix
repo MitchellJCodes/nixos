@@ -13,6 +13,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-xwayland.url = "github:NixOS/nixpkgs/c4e0120b295daaac44f245f1c50ec06e844fe53b";
 
     noctalia = {
       url = "github:noctalia-dev/noctalia/cachix";
@@ -22,6 +23,10 @@
     noctalia-greeter = {
       url = "github:noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    millennium = {
+      url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     };
 
     lanzaboote = {
@@ -38,10 +43,12 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-xwayland,
     noctalia,
     noctalia-greeter,
     lanzaboote,
     dotfiles,
+    millennium,
     ...
   }:
   let
@@ -59,11 +66,25 @@
           username;
       };
 
-      modules = [
-        lanzaboote.nixosModules.lanzaboote
-        noctalia-greeter.nixosModules.default
-        ./configuration.nix
+  modules = [
+    {
+      nixpkgs.overlays = [
+        millennium.overlays.default
+
+          (final: prev: {
+            xwayland-satellite =
+              (import nixpkgs-xwayland {
+                system = prev.system;
+              }).xwayland-satellite;
+          })
       ];
+    }
+
+    lanzaboote.nixosModules.lanzaboote
+    noctalia-greeter.nixosModules.default
+  
+    ./configuration.nix
+  ];
     };
   };
 }
