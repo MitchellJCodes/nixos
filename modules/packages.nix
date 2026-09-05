@@ -75,11 +75,9 @@
     bazaar
     showtime
     snapshot
-    gnome-music
+    amberol
     gnome-text-editor
     loupe
-    tinysparql
-    localsearch
     gnome-disk-utility
 
     # Office
