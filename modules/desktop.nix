@@ -4,12 +4,6 @@
   # Desktop / session
   programs.niri.enable = true;
 
-  # LocalSearch/TinySPARQL require this in the systemd user environment
-  # when running the Niri session through greetd/Noctalia Greeter.
-  systemd.user.settings.Manager = {
-    DefaultEnvironment = "XDG_SESSION_CLASS=user";
-  };
-
   # X11 keyboard configuration
   services.xserver.xkb = {
     layout = "us";
