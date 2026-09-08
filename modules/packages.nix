@@ -70,6 +70,8 @@
     gnome-calculator
     system-config-printer
     nwg-displays
+    overskride
+    nmgui
   
     # GNOME Apps
     bazaar
