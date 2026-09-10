@@ -40,7 +40,8 @@
     fzf
     resvg
     imagemagick
-            
+    xdg-user-dirs
+    
     # Terminal
     ghostty
 
@@ -56,8 +57,8 @@
 
     # Shell
     starship
-    xdg-user-dirs
     zoxide
+    atuin
     
     # Noctalia
     noctalia.packages.${pkgs.system}.default
