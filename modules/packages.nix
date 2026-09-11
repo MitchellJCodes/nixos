@@ -59,6 +59,7 @@
     starship
     zoxide
     atuin
+    zellij
     
     # Noctalia
     noctalia.packages.${pkgs.system}.default
@@ -71,9 +72,7 @@
     gnome-calculator
     system-config-printer
     nwg-displays
-    overskride
-    nmgui
-  
+      
     # GNOME Apps
     bazaar
     showtime
