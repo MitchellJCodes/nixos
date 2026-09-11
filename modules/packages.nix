@@ -41,6 +41,7 @@
     resvg
     imagemagick
     xdg-user-dirs
+    glib
     
     # Terminal
     ghostty
@@ -52,7 +53,6 @@
 
     # Theme
     bibata-cursors
-    adwaita-icon-theme
     papirus-icon-theme
 
     # Shell
