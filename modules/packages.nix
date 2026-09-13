@@ -44,7 +44,7 @@
     glib
     
     # Terminal
-    ghostty
+    foot
 
     # Files
     nautilus
