@@ -28,7 +28,6 @@
 
     packages = with pkgs; [
       # UI
-      inter
       adwaita-fonts
 
       # Programming
