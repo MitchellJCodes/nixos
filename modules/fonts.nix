@@ -11,7 +11,7 @@
         ];
 
         sansSerif = [
-          "Inter"
+          "Adwaita Sans"
           "Noto Sans"
         ];
 
