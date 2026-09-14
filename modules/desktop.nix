@@ -16,8 +16,6 @@
 
   # GNOME services used by desktop applications
   services.gnome.gnome-keyring.enable = true;
-  services.gnome.tinysparql.enable = true;
-  services.gnome.localsearch.enable = true;
 
   security.pam.services = {
     login.enableGnomeKeyring = true;
