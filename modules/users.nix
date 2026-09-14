@@ -1,7 +1,7 @@
 { pkgs, username, ... }:
 
 {
-  users.users.${username} = {
+  users.users.${username}= {
     isNormalUser = true;
     description = username;
 
@@ -9,6 +9,8 @@
       "networkmanager"
       "wheel"
     ];
+
+    shell = pkgs.nushell;
   };
 
   environment.systemPackages = [
@@ -16,7 +18,5 @@
     pkgs.fish
   ];
 
-  programs.bash.interactiveShellInit = ''
-    exec ${pkgs.nushell}/bin/nu
-  '';
+  programs.nushell.enable = true;
 }
