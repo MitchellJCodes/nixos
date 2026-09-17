@@ -8,7 +8,7 @@
     ./modules/swap.nix
     ./modules/users.nix
     ./modules/networking.nix
-    ./modules/firefox.nix
+    ./modules/librewolf.nix
     ./modules/thunderbird.nix
     ./modules/greeter.nix
     ./modules/desktop.nix
