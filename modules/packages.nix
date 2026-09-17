@@ -28,6 +28,7 @@
     yazi
     file
     fastfetch
+    pywalfox-native
     git
     helix
     ripgrep
@@ -62,7 +63,7 @@
     zellij
     
     # Noctalia
-    noctalia.packages.${pkgs.system}.default
+    noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     seatd
     elogind
 
@@ -73,28 +74,22 @@
     system-config-printer
     nwg-displays
       
-    # GNOME Apps
+    # Applications
     bazaar
     showtime
     snapshot
-    amberol
+    recordbox
     gnome-text-editor
     loupe
     gnome-disk-utility
+    audacity
+    signal-desktop
+    mousam
 
     # Office
     kdePackages.okular
     onlyoffice-desktopeditors
-
-    # Audio
-    audacity
-
-    # Communication
-    signal-desktop
     
-    # Browser Integration
-    pywalfox-native
-
     # Fish Plugins
     fishPlugins.done
     fishPlugins.fzf-fish
