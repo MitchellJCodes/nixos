@@ -55,6 +55,8 @@
     # Theme
     bibata-cursors
     papirus-icon-theme
+    adw-gtk3
+    nwg-look
 
     # Shell
     starship
