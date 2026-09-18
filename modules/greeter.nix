@@ -1,7 +1,7 @@
 { pkgs, username, ... }:
 
 {
-  programs.noctalia-greeter = {
+  services.displayManager.noctalia-greeter = {
     enable = true;
 
     greeter-args = "";
@@ -26,5 +26,10 @@
         password_style = "random";
       };
     };
+  };
+
+  services.greetd.settings.initial_session = {
+    command = "niri-session";
+    user = username;
   };
 }
