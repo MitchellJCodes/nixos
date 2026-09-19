@@ -17,7 +17,7 @@
     nvidiaSettings = true;
 
     # Driver package
-    package = config.boot.kernelPackages.nvidiaPackages.production;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
 
   # CUDA binary cache
