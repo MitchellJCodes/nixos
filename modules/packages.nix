@@ -49,7 +49,7 @@
 
     # Files
     nautilus
-    file-roller
+    xarchiver
     sushi
 
     # Theme
