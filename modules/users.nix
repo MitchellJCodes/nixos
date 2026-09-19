@@ -17,6 +17,4 @@
     pkgs.nushell
     pkgs.fish
   ];
-
-  programs.nushell.enable = true;
 }
