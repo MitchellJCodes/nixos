@@ -80,7 +80,7 @@
     bazaar
     showtime
     snapshot
-    recordbox
+    rhythmbox
     gnome-text-editor
     loupe
     gnome-disk-utility
