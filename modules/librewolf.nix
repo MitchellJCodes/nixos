@@ -8,24 +8,13 @@ let
     };
   };
 in
+
 {
   programs.firefox = {
     enable = true;
     package = pkgs.librewolf;
 
     policies = {
-      # Privacy
-      DisableTelemetry = true;
-      DisableFirefoxStudies = true;
-      DisablePocket = true;
-
-      # Passwords
-      OfferToSaveLogins = false;
-      PasswordManagerEnabled = false;
-
-      # Browser
-      DontCheckDefaultBrowser = true;
-      DisableProfileImport = true;
 
       # Extensions
       ExtensionSettings = builtins.listToAttrs [
@@ -84,17 +73,18 @@ in
           }
         ];
       };
-    };
 
-    # Preferences are outside `policies`.
-    preferences = {
-      "browser.urlbar.suggest.quicksuggest" = false;
-      "browser.urlbar.quicksuggest.enabled" = false;
-      "browser.urlbar.quicksuggest.dataCollection.enabled" = false;
-      "browser.search.suggest.enabled" = false;
-      "browser.discovery.enabled" = false;
-      "browser.newtabpage.activity-stream.feeds.topsites" = false;
-      "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
+    Preferences = {
+      "cookiebanners.service.mode.privateBrowsing" = 2; # Block cookie banners in private browsing
+      "cookiebanners.service.mode" = 2; # Block cookie banners
+      "privacy.donottrackheader.enabled" = true;
+      "privacy.fingerprintingProtection" = true;
+      "privacy.resistFingerprinting" = true;
+      "privacy.trackingprotection.emailtracking.enabled" = true;
+      "privacy.trackingprotection.enabled" = true;
+      "privacy.trackingprotection.fingerprinting.enabled" = true;
+      "privacy.trackingprotection.socialtracking.enabled" = true;
+      };
     };
   };
 
