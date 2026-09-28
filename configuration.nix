@@ -8,8 +8,6 @@
     ./modules/swap.nix
     ./modules/users.nix
     ./modules/networking.nix
-    ./modules/librewolf.nix
-    ./modules/thunderbird.nix
     ./modules/greeter.nix
     ./modules/desktop.nix
     ./modules/dotfiles.nix
@@ -19,12 +17,15 @@
     ./modules/packages.nix
     ./modules/services.nix
 
-   # ./modules/nvidia.nix
-   # ./modules/rog.nix
-   # ./modules/virt-manager.nix
 
-   # ./modules/howdy.nix
-   # ./modules/secureboot.nix
+    # ./modules/secureboot.nix
+    # ./modules/nvidia.nix
+    # ./modules/rog.nix
+    # ./modules/virt-manager.nix
+    # ./modules/librewolf.nix
+    # ./modules/howdy.nix
+    # ./modules/thunderbird.nix
+
   ];
 
   system.stateVersion = "26.05";
