@@ -1,6 +1,14 @@
 { pkgs, ... }:
 
 {
+  # Disable hibernation, but keep regular suspend/sleep
+  systemd.sleep.settings.Sleep = {
+    AllowSuspend = true;
+    AllowHibernation = false;
+    AllowHybridSleep = false;
+    AllowSuspendThenHibernate = false;
+  };
+
   # Printing
   services.printing = {
     enable = true;
@@ -22,6 +30,25 @@
     script = ''
       flatpak remote-add --if-not-exists \
         flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+    '';
+
+    serviceConfig.Type = "oneshot";
+  };
+
+  # Force-install required Flatpaks
+  systemd.services.flatpak-install = {
+    description = "Install required Flatpak applications";
+
+    after = [ "flatpak-repo.service" ];
+    requires = [ "flatpak-repo.service" ];
+    wantedBy = [ "multi-user.target" ];
+
+    path = [ pkgs.flatpak ];
+
+    script = ''
+      flatpak install --system --noninteractive flathub \
+        com.github.tchx84.Flatseal \
+        com.dec05eba.gpu_screen_recorder
     '';
 
     serviceConfig.Type = "oneshot";
