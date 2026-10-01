@@ -29,7 +29,6 @@
     goverlay
     mangohud
     gamescope
-    pcsx2
     # ...
   ];
 }
