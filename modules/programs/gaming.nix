@@ -25,7 +25,7 @@
     winetricks
     protontricks
     protonplus
-    lutris-free
+    lutris
     goverlay
     mangohud
     gamescope
