@@ -2,7 +2,7 @@
 
 {
   system.activationScripts.bootstrapDotfiles.text = ''
-    ${pkgs.bash}/bin/bash ${./scripts/bootstrap-dotfiles.sh} \
+    ${pkgs.bash}/bin/bash ${./bootstrap-dotfiles.sh} \
       "/home/${username}" \
       "${username}" \
       "${dotfiles}"

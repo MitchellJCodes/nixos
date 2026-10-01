@@ -4,27 +4,37 @@
   imports = [
     ./hardware-configuration.nix
 
-    ./modules/boot.nix
-    ./modules/swap.nix
-    ./modules/users.nix
-    ./modules/networking.nix
-    ./modules/greeter.nix
-    ./modules/desktop.nix
-    ./modules/dotfiles.nix
-    ./modules/fonts.nix
-    ./modules/audio.nix
-    ./modules/gaming.nix
-    ./modules/packages.nix
-    ./modules/services.nix
+    ./modules/system/audio.nix
+    ./modules/system/boot.nix
+    ./modules/system/greeter.nix
+    ./modules/system/networking.nix
+    ./modules/system/swap.nix
+    ./modules/system/users.nix
+    # ./modules/system/users-fish.nix
+
+    ./modules/hardware/nvidia.nix
+    # ./modules/hardware/rog.nix
 
 
-    # ./modules/secureboot.nix
-    # ./modules/nvidia.nix
-    # ./modules/rog.nix
-    # ./modules/virt-manager.nix
-    # ./modules/librewolf.nix
-    # ./modules/howdy.nix
-    # ./modules/thunderbird.nix
+    ./modules/desktop/defaults.nix
+    ./modules/desktop/desktop.nix
+    ./modules/desktop/fonts.nix
+
+
+    ./modules/dotfiles/dotfiles.nix
+
+
+    # ./modules/programs/browsers/firefox.nix
+    ./modules/programs/browsers/librewolf.nix
+
+
+    ./modules/programs/gaming.nix
+    ./modules/programs/packages.nix
+    ./modules/programs/thunderbird.nix
+    # ./modules/programs/virt-manager.nix
+
+    # ./modules/services/howdy.nix
+    ./modules/services/services.nix
 
   ];
 

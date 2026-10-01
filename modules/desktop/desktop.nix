@@ -3,6 +3,9 @@
 {
   # Desktop / session
   programs.niri.enable = true;
+  programs.noctalia.enable = true;
+  programs.noctalia.systemd.enable = true;
+  programs.noctalia.recommendedServices.enable = true;
 
   # X11 keyboard configuration
   services.xserver.xkb = {

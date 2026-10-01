@@ -28,11 +28,27 @@
     kernelPackages = pkgs.linuxPackages_latest;
 
     loader = {
-      timeout = 0;
-
-      systemd-boot.enable = true;
-
+      timeout = 5;
       efi.canTouchEfiVariables = true;
+
+      limine = {
+        enable = true;
+        secureBoot.enable = true;
+        maxGenerations = 10;
+
+        style = {
+          wallpapers = [];
+          backdrop = "000000";
+
+          interface = {
+            branding = "";
+            brandingColor = "FFFFFF";
+            helpHidden = true;
+            helpColor = "FFFFFF";
+            helpColorBright = "FFFFFF";
+          };
+        };
+      };
     };
   };
 }

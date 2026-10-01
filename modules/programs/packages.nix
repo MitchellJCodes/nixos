@@ -1,4 +1,4 @@
-{ pkgs, noctalia, ... }:
+{ pkgs, app-manager, ... }:
 
 {
   # OBS-Studio
@@ -43,6 +43,7 @@
     imagemagick
     xdg-user-dirs
     glib
+    bat
     
     # Terminal
     foot
@@ -55,7 +56,9 @@
     # Theme
     bibata-cursors
     papirus-icon-theme
+    kdePackages.oxygen-icons
     adw-gtk3
+    kdePackages.qt6ct
     nwg-look
 
     # Shell
@@ -65,10 +68,12 @@
     zellij
     
     # Noctalia
-    noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-    seatd
-    elogind
-
+    # seatd
+    # elogind
+    
+    # AppManager
+    app-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
+    
     # Utilities
     localsend
     xwayland-satellite
@@ -90,7 +95,10 @@
 
     # Office
     kdePackages.okular
-    onlyoffice-desktopeditors
+    libreoffice
+    hunspell
+    hunspellDicts.en_US
+    hyphenDicts.en_US
     
     # Fish Plugins
     fishPlugins.done

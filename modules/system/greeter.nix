@@ -4,7 +4,7 @@
   services.displayManager.noctalia-greeter = {
     enable = true;
 
-    greeter-args = "";
+    extraArgs = [];
 
     settings = {
       cursor = {

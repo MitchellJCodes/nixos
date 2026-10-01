@@ -15,6 +15,8 @@
 
   environment.systemPackages = [
     pkgs.nushell
-    pkgs.fish
+    # pkgs.fish
   ];
+
+  # programs.nushell.enable = true;
 }
