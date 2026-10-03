@@ -73,13 +73,13 @@
     
     # AppManager
     app-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
-    
+        
     # Utilities
     localsend
     xwayland-satellite
     gnome-calculator
     system-config-printer
-    nwg-displays
+    # nwg-displays
       
     # Applications
     bazaar

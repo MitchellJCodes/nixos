@@ -10,9 +10,9 @@
     ./modules/system/networking.nix
     ./modules/system/swap.nix
     ./modules/system/users.nix
-    # ./modules/system/users-fish.nix
 
-    ./modules/hardware/nvidia.nix
+
+    # ./modules/hardware/nvidia.nix
     # ./modules/hardware/rog.nix
 
 
@@ -26,6 +26,7 @@
 
     # ./modules/programs/browsers/firefox.nix
     ./modules/programs/browsers/librewolf.nix
+    # ./modules/programs/browsers/zen-browser.nix
 
 
     ./modules/programs/gaming.nix

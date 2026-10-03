@@ -29,7 +29,7 @@
   };
 
   services.greetd.settings.initial_session = {
-    command = "niri-session";
+    command = "start-umbriel";
     user = username;
   };
 }
