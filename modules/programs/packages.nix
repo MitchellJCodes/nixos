@@ -1,19 +1,6 @@
 { pkgs, app-manager, ... }:
 
 {
-  # OBS-Studio
-  programs.obs-studio = {
-  enable = true;
-
-  plugins = with pkgs.obs-studio-plugins; [
-    wlrobs
-    obs-backgroundremoval
-    obs-pipewire-audio-capture
-    obs-gstreamer
-    obs-vkcapture
-    ];
-  };
-
   # General Packages
   environment.systemPackages = with pkgs; [
     # Desktop
@@ -44,6 +31,7 @@
     xdg-user-dirs
     glib
     bat
+    tldr
     
     # Terminal
     foot
@@ -92,7 +80,7 @@
     audacity
     signal-desktop
     mousam
-
+    
     # Office
     kdePackages.okular
     libreoffice
@@ -109,4 +97,23 @@
 
     grc
   ];
+
+  # OBS-Studio
+  programs.obs-studio = {
+  enable = true;
+
+  plugins = with pkgs.obs-studio-plugins; [
+    wlrobs
+    obs-backgroundremoval
+    obs-pipewire-audio-capture
+    obs-gstreamer
+    obs-vkcapture
+    ];
+  };
+
+  # GSR-UI
+  programs.gpu-screen-recorder = {
+    enable = true;
+    ui.enable = true; # For overlay
+  };
 }

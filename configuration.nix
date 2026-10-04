@@ -26,7 +26,6 @@
 
     # ./modules/programs/browsers/firefox.nix
     ./modules/programs/browsers/librewolf.nix
-    # ./modules/programs/browsers/zen-browser.nix
 
 
     ./modules/programs/gaming.nix

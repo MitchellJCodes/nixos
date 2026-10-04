@@ -5,6 +5,7 @@ let
     name = id;
     value = {
       installation_mode = "force_installed";
+      private_browsing = true;
     };
   };
 in
@@ -140,6 +141,10 @@ in
       "browser.discovery.enabled" = false;
       "browser.newtabpage.activity-stream.feeds.topsites" = false;
       "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
+      "cookiebanners.service.mode" = 2;
+      "cookiebanners.service.mode.privateBrowsing" = 2;
+      "privacy.trackingprotection.emailtracking.enabled" = true;
+      "privacy.trackingprotection.socialtracking.enabled" = true;
 
       # Optional: stronger anti-fingerprinting, but can break websites.
       # "privacy.resistFingerprinting" = true;

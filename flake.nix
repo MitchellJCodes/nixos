@@ -6,6 +6,12 @@
 
     millennium = {
       url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    umbriel = {
+      url = "git+https://github.com/noctalia-dev/umbriel";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     app-manager = {
@@ -22,6 +28,7 @@
   outputs = {
     self,
     nixpkgs,
+    umbriel,
     app-manager,
     dotfiles,
     millennium,
@@ -48,6 +55,8 @@
         millennium.overlays.default
       ];
     }
+
+    umbriel.nixosModules.default
 
     ./configuration.nix
   ];

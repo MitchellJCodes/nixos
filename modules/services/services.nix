@@ -47,8 +47,7 @@
 
     script = ''
       flatpak install --system --noninteractive flathub \
-        com.github.tchx84.Flatseal \
-        com.dec05eba.gpu_screen_recorder
+        com.github.tchx84.Flatseal
     '';
 
     serviceConfig.Type = "oneshot";
