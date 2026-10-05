@@ -1,4 +1,4 @@
-{ config, pkgs, noctalia, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [

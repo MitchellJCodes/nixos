@@ -26,7 +26,7 @@
     protontricks
     protonplus
     lutris
-    # goverlay
+    goverlay
     mangohud
     gamescope
     pcsx2

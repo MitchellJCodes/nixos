@@ -28,7 +28,7 @@
     kernelPackages = pkgs.linuxPackages_latest;
 
     loader = {
-      timeout = 5;
+      # timeout = 0.25;
       efi.canTouchEfiVariables = true;
 
       limine = {
@@ -36,9 +36,16 @@
         secureBoot.enable = true;
         maxGenerations = 10;
 
+        extraConfig = ''
+          quiet: yes
+          terse: yes
+          timeout: 0.25
+        '';
+        
         style = {
-          wallpapers = [];
-          backdrop = "000000";
+          wallpapers = [ ./assets/boot_img.jpg ];
+          wallpaperStyle = "centered";
+          # backdrop = "000000";
 
           interface = {
             branding = "";
