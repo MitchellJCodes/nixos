@@ -1,6 +1,6 @@
 { pkgs, username, ... }:
 
-{
+with pkgs; {
   users.users.${username} = {
     isNormalUser = true;
     description = username;
@@ -10,14 +10,25 @@
       "wheel"
     ];
 
-    shell = pkgs.nushell;
+    shell = nushell;
   };
 
   environment.shells = [
-    pkgs.nushell
+    nushell
   ];
 
   environment.systemPackages = [
-    pkgs.nushell
+    nushell
+    fish
   ];
+
+  environment.etc."nushell/config.nu".text = ''
+    let fish_completer = {|spans|
+      fish --command $"complete '--do-complete=($spans | str join ' ')'"
+      | from tsv --flexible --noheaders --no-infer
+      | rename value description
+    }
+
+    $env.config.completions.external.completer = $fish_completer
+  '';
 }
