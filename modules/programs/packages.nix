@@ -32,6 +32,7 @@
     glib
     bat
     tldr
+    ddcutil
     
     # Terminal
     foot

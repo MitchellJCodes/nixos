@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    umbriel = {
-      url = "git+https://github.com/noctalia-dev/umbriel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     app-manager = {
       url = "github:kem-a/AppManager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,7 +23,6 @@
   outputs = {
     self,
     nixpkgs,
-    umbriel,
     app-manager,
     dotfiles,
     millennium,
@@ -55,8 +49,6 @@
         millennium.overlays.default
       ];
     }
-
-    umbriel.nixosModules.default
 
     ./configuration.nix
   ];

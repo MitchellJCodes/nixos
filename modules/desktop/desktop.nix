@@ -42,6 +42,7 @@
 
   # Hardware / power
   hardware.bluetooth.enable = true;
+  hardware.i2c.enable = true;
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
 

@@ -5,12 +5,6 @@
     plymouth = {
       enable = true;
       theme = "spinner";
-
-      themePackages = with pkgs; [
-        (adi1090x-plymouth-themes.override {
-          selected_themes = [ "rings" ];
-        })
-      ];
     };
 
     consoleLogLevel = 3;
@@ -43,7 +37,7 @@
         '';
         
         style = {
-          wallpapers = [ ./assets/boot_img.jpg ];
+          wallpapers = [ ./assets/boot_img2.png ];
           wallpaperStyle = "centered";
           # backdrop = "000000";
 
