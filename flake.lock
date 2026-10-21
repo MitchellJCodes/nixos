@@ -1,25 +1,5 @@
 {
   "nodes": {
-    "app-manager": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1791921865,
-        "narHash": "sha256-diOO23bmq1VVyMzByL6qWx685SZSk8LUn9DZa2Uom8Q=",
-        "owner": "kem-a",
-        "repo": "AppManager",
-        "rev": "e2000532fdbcfab40d96c60784352ef3ab8ab186",
-        "type": "github"
-      },
-      "original": {
-        "owner": "kem-a",
-        "repo": "AppManager",
-        "type": "github"
-      }
-    },
     "dotfiles": {
       "flake": false,
       "locked": {
@@ -111,7 +91,6 @@
     },
     "root": {
       "inputs": {
-        "app-manager": "app-manager",
         "dotfiles": "dotfiles",
         "millennium": "millennium",
         "nixpkgs": "nixpkgs"

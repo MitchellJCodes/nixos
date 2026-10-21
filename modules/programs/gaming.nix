@@ -9,6 +9,13 @@
   # Enable Gamemode
   programs.gamemode.enable = true;
 
+  # Enable Gamescope
+  programs.gamescope = {
+    enable = true;
+    enableWsi = true;
+    capSysNice = false;
+  };
+
   # Enable Steam
   programs.steam = {
     enable = true;
@@ -28,7 +35,7 @@
     lutris
     goverlay
     mangohud
-    gamescope
+    pcsx2
     # ...
   ];
 }

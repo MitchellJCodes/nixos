@@ -16,8 +16,7 @@
         ];
 
         monospace = [
-          "JetBrains Mono"
-          "JetBrainsMono Nerd Font"
+          "AdwaitaMono Nerd Font"
         ];
 
         emoji = [
@@ -31,7 +30,7 @@
       adwaita-fonts
 
       # Programming
-      nerd-fonts.jetbrains-mono
+      nerd-fonts.adwaita-mono
 
       # General text
       noto-fonts

@@ -1,4 +1,4 @@
-{ pkgs, app-manager, ... }:
+{ pkgs, ... }:
 
 {
   # General Packages
@@ -33,7 +33,8 @@
     bat
     tldr
     ddcutil
-    
+    distrobox
+
     # Terminal
     foot
 
@@ -45,7 +46,6 @@
     # Theme
     bibata-cursors
     papirus-icon-theme
-    kdePackages.oxygen-icons
     adw-gtk3
     kdePackages.qt6ct
     nwg-look
@@ -55,20 +55,13 @@
     zoxide
     atuin
     zellij
-    
-    # Noctalia
-    # seatd
-    # elogind
-    
-    # AppManager
-    app-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
         
     # Utilities
     localsend
     xwayland-satellite
     gnome-calculator
     system-config-printer
-    # nwg-displays
+    gearlever
       
     # Applications
     bazaar
@@ -78,25 +71,16 @@
     gnome-text-editor
     loupe
     gnome-disk-utility
-    audacity
+    # audacity
     signal-desktop
     mousam
-    
+        
     # Office
     kdePackages.okular
     libreoffice
     hunspell
     hunspellDicts.en_US
     hyphenDicts.en_US
-    
-    # Fish Plugins
-    fishPlugins.done
-    fishPlugins.fzf-fish
-    fishPlugins.forgit
-    fishPlugins.hydro
-    fishPlugins.grc
-
-    grc
   ];
 
   # OBS-Studio

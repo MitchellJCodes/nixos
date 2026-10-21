@@ -3,19 +3,11 @@
 {
   # Desktop / shell
   programs.umbriel.enable = true;
-
+  
   programs.noctalia = {
     enable = true;
     systemd.enable = true;
     recommendedServices.enable = true;
-  };
-
-  systemd.user.services.noctalia = {
-    environment = {
-      QT_QPA_PLATFORM = "wayland";
-      QT_QPA_PLATFORMTHEME = "qt6ct";
-      QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    };
   };
 
   # X11 keyboard configuration
@@ -49,11 +41,5 @@
   # XDG portals
   xdg.portal = {
     enable = true;
-
-    # extraPortals = with pkgs; [
-    #   xdg-desktop-portal-wlr
-    #   xdg-desktop-portal-gnome
-    #   xdg-desktop-portal-gtk
-    # ];
   };
 }

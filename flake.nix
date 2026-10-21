@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    app-manager = {
-      url = "github:kem-a/AppManager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     dotfiles = {
       url = "github:mitchelljcodes/dotfiles";
       flake = false;
@@ -23,7 +18,6 @@
   outputs = {
     self,
     nixpkgs,
-    app-manager,
     dotfiles,
     millennium,
     ...
@@ -37,7 +31,6 @@
 
       specialArgs = {
         inherit
-          app-manager
           dotfiles
           hostname
           username;
@@ -49,7 +42,6 @@
         millennium.overlays.default
       ];
     }
-
     ./configuration.nix
   ];
     };

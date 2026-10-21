@@ -19,16 +19,5 @@ with pkgs; {
 
   environment.systemPackages = [
     nushell
-    fish
   ];
-
-  environment.etc."nushell/config.nu".text = ''
-    let fish_completer = {|spans|
-      fish --command $"complete '--do-complete=($spans | str join ' ')'"
-      | from tsv --flexible --noheaders --no-infer
-      | rename value description
-    }
-
-    $env.config.completions.external.completer = $fish_completer
-  '';
 }
