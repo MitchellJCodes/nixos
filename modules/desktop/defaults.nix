@@ -13,10 +13,11 @@
       "application/xhtml+xml" = "librewolf.desktop";
 
       # File manager
-      "inode/directory" = "org.gnome.Nautilus.desktop";
+      "inode/directory" = "thunar.desktop";
+      "application/x-gnome-saved-search" = "thunar.desktop";
 
       # Images
-      "image/*" = "org.gnome.Loupe.desktop";
+      "image/*" = "imv-dir.desktop";
 
       # PDF and documents
       "application/pdf" = "org.kde.okular.desktop";
@@ -30,7 +31,7 @@
       "text/markdown" = "org.gnome.TextEditor.desktop";
 
       # Video
-      "video/*" = "org.gnome.Showtime.desktop";
+      "video/*" = "mpv.desktop";
 
       # Audio
       "application/x-ogg" = "org.gnome.Rhythmbox3.desktop";

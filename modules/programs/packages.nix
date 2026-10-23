@@ -33,15 +33,9 @@
     bat
     tldr
     ddcutil
-    distrobox
 
     # Terminal
     foot
-
-    # Files
-    nautilus
-    xarchiver
-    sushi
 
     # Theme
     bibata-cursors
@@ -56,24 +50,22 @@
     atuin
     zellij
         
-    # Utilities
+    # Applications
+    bazaar
+    mpv
+    snapshot
+    rhythmbox
+    imv
+    gnome-disk-utility
+    audacity
+    signal-desktop
+    mousam
+    xarchiver
     localsend
     xwayland-satellite
     gnome-calculator
     system-config-printer
     gearlever
-      
-    # Applications
-    bazaar
-    showtime
-    snapshot
-    rhythmbox
-    gnome-text-editor
-    loupe
-    gnome-disk-utility
-    # audacity
-    signal-desktop
-    mousam
         
     # Office
     kdePackages.okular
@@ -83,6 +75,11 @@
     hyphenDicts.en_US
   ];
 
+  # Thunar
+  programs.thunar.enable = true;
+  programs.xfconf.enable = true;
+  services.tumbler.enable = true; # Thumbnail support for images
+  
   # OBS-Studio
   programs.obs-studio = {
   enable = true;
