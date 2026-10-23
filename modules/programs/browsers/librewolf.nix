@@ -72,6 +72,13 @@ in
             IconURL = "https://noogle.dev/favicon.ico";
             Alias = "@ng";
           }
+
+          {
+            Name = "Nix Software";
+            URLTemplate = "https://nixsoftware.org/en/packages?search={searchTerms}";
+            IconURL = "https://nixsoftware.org/favicon.ico";
+            Alias = "@ns";
+          }
         ];
       };
 
