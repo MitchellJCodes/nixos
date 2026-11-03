@@ -11,6 +11,7 @@
         theme = "Bibata-Modern-Ice";
         size = 24;
         path = "${pkgs.bibata-cursors}/share/icons";
+        idle.timeout = 60;
       };
 
       keyboard = {
@@ -25,6 +26,10 @@
         hide_logo = true;
         password_style = "random";
       };
+      
+      # output = {
+        # use_synced_settings = false;
+      # };
     };
   };
 

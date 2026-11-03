@@ -3,18 +3,11 @@
 {
   # Nvidia Settings
   hardware.nvidia = {
-    # Modesetting is required.
     modesetting.enable = true;
-
-    # Nvidia power management
     powerManagement.enable = true;
     powerManagement.finegrained = true;
-
-    # Open kernel module
-    open = true;
-
-    # Enable nvidia-settings
     nvidiaSettings = true;
+    open = true;
 
     # Driver package
     package = config.boot.kernelPackages.nvidiaPackages.latest;
@@ -51,4 +44,9 @@
   programs.obs-studio.package = pkgs.obs-studio.override {
     cudaSupport = true;
   };
+
+  # Enable NVIDIA S0ix power management
+  boot.extraModprobeConfig = ''
+    options nvidia NVreg_EnableS0ixPowerManagement=1
+  '';
 }

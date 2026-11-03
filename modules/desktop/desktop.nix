@@ -3,6 +3,7 @@
 {
   # Desktop / shell
   programs.umbriel.enable = true;
+  programs.niri.enable = true;
   
   programs.noctalia = {
     enable = true;

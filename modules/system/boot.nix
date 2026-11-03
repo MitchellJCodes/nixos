@@ -9,25 +9,20 @@
 
     consoleLogLevel = 3;
 
-    initrd = {
-      verbose = false;
-    };
-
     kernelParams = [
       "quiet"
       "rd.udev.log_level=3"
       "rd.systemd.show_status=auto"
     ];
 
-    kernelPackages = pkgs.linuxPackages_latest;
+    # kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxKernel.packages.linux_7_2;
 
     loader = {
-      # timeout = 0.25;
       efi.canTouchEfiVariables = true;
 
       limine = {
         enable = true;
-        secureBoot.enable = true;
         maxGenerations = 10;
 
         extraConfig = ''

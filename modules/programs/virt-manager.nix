@@ -39,8 +39,8 @@
     dnsmasq
     bridge-utils
 
-    libguestfs
-    guestfs-tools
+    # libguestfs
+    # guestfs-tools
 
     virtiofsd
   ];

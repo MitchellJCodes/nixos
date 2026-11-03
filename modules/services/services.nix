@@ -15,6 +15,9 @@
     webInterface = true;
   };
 
+  # Sushi
+  services.gnome.sushi.enable = true;
+
   # Flatpak
   services.flatpak.enable = true;
 
