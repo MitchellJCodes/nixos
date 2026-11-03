@@ -27,7 +27,7 @@
   }:
   let
     hostname = "nixos-btw";
-    username = "mitch";
+    username = "USERNAME";
   in {
     nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
