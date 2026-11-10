@@ -31,9 +31,6 @@
     bat
     tldr
     ddcutil
-    cowsay
-    fortune
-    lolcat
 
     # Terminal
     foot
@@ -45,8 +42,8 @@
     bibata-cursors
     papirus-icon-theme
     adw-gtk3
-    kdePackages.qt6ct
     nwg-look
+    kdePackages.qt6ct
 
     # Shell
     starship
@@ -54,13 +51,13 @@
     atuin
     zellij
 
-    # Applications (unstable)
+    # Applications
     bazaar
     mpv
     snapshot
     rhythmbox
     imv
-    gnome-disk-utility
+    gparted
     audacity
     signal-desktop
     mousam
@@ -70,6 +67,8 @@
     xwayland-satellite
     gnome-calculator
     system-config-printer
+    gnome-text-editor
+    komikku
 
     # Office
     kdePackages.okular
@@ -110,9 +109,5 @@
   programs.gpu-screen-recorder = {
     enable = true;
     ui.enable = true; # For overlay
-  };
-
-  nixpkgs.config = {
-    problems.handlers."gtk+".broken = "warn"; # or "ignore"
   };
 }
