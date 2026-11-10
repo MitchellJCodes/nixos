@@ -3,8 +3,7 @@
 {
   # Desktop / shell
   programs.umbriel.enable = true;
-  programs.niri.enable = true;
-  
+
   programs.noctalia = {
     enable = true;
     systemd.enable = true;
@@ -23,6 +22,13 @@
 
   # GNOME services used by desktop applications
   services.gnome.gnome-keyring.enable = true;
+
+  # Environment variables
+  environment.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qt6ct";
+    GTK_THEME = "adw-gtk3-dark";
+  };
+
 
   security.pam.services = {
     login.enableGnomeKeyring = true;

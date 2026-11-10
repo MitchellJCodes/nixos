@@ -14,5 +14,13 @@
     };
   };
 
-  security.pam.services.greetd.howdy.enable = true;
+  security.pam.services = {
+    greetd.howdy.enable = true;
+    polkit-1.howdy.enable = true;
+  };
+
+  systemd.services."polkit-agent-helper@".serviceConfig = {
+    PrivateDevices = false;
+    DeviceAllow = "char-video4linux rw";
+  };
 }

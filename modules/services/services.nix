@@ -62,20 +62,20 @@
     binfmt = true;
   };
 
-  # Allow Unfree Repository
+  # Nix helper & settings
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    # flake = "/home/user/my-nixos-config"; # sets NH_OS_FLAKE variable for you
+  };
   nixpkgs.config.allowUnfree = true;
-
-  # Auto Optimise store
   nix.settings.auto-optimise-store = true;
-
-  # 7 Day Garbage collection
-  nix.gc.automatic = true;
-
-  # Enable Flakes and Nix commands
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
+
 
   # Timezone and Locale
   time.timeZone = "America/New_York";

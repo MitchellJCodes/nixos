@@ -27,8 +27,8 @@
       "image/vnd.djvu" = "org.kde.okular.desktop";
 
       # Text
-      "text/plain" = "Helix.desktop";
-      "text/markdown" = "Helix.desktop";
+      "text/plain" = "org.gnome.TextEditor.desktop";
+      "text/markdown" = "org.gnome.TextEditor.desktop";
 
       # Video
       "video/*" = "mpv.desktop";
