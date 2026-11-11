@@ -4,6 +4,8 @@
   services.displayManager.noctalia-greeter = {
     enable = true;
 
+    passwordlessSyncUsers = [ username ];
+
     extraArgs = [];
 
     settings = {
@@ -26,10 +28,6 @@
         hide_logo = true;
         password_style = "random";
       };
-      
-      # output = {
-        # use_synced_settings = false;
-      # };
     };
   };
 
