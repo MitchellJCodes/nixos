@@ -67,7 +67,7 @@
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
-    # flake = "/home/user/my-nixos-config"; # sets NH_OS_FLAKE variable for you
+    flake = "/home/mitch/.config/nixos/";
   };
   nixpkgs.config.allowUnfree = true;
   nix.settings.auto-optimise-store = true;
@@ -75,7 +75,6 @@
     "nix-command"
     "flakes"
   ];
-
 
   # Timezone and Locale
   time.timeZone = "America/New_York";

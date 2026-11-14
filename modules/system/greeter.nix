@@ -6,7 +6,7 @@
 
     passwordlessSyncUsers = [ username ];
 
-    extraArgs = [];
+    extraArgs = [ ];
 
     settings = {
       cursor = {

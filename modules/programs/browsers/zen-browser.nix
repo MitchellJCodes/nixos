@@ -3,28 +3,21 @@
 let
   extension = addonId: {
     installation_mode = "force_installed";
-    install_url =
-      "https://addons.mozilla.org/firefox/downloads/latest/${addonId}/latest.xpi";
+    install_url = "https://addons.mozilla.org/firefox/downloads/latest/${addonId}/latest.xpi";
   };
 
   extensions = {
-    "uBlock0@raymondhill.net" =
-      extension "ublock-origin";
+    "uBlock0@raymondhill.net" = extension "ublock-origin";
 
-    "{446900e4-71c2-419f-a6a7-df9c091e268b}" =
-      extension "bitwarden-password-manager";
+    "{446900e4-71c2-419f-a6a7-df9c091e268b}" = extension "bitwarden-password-manager";
 
-    "addon@darkreader.org" =
-      extension "darkreader";
+    "addon@darkreader.org" = extension "darkreader";
 
-    "sponsorBlocker@ajay.app" =
-      extension "sponsorblock";
+    "sponsorBlocker@ajay.app" = extension "sponsorblock";
 
-    "pywalfox@frewacom.org" =
-      extension "pywalfox";
+    "pywalfox@frewacom.org" = extension "pywalfox";
 
-    "{88ebde3a-4581-4c6b-8019-2a05a9e3e938}" =
-      extension "hide-youtube-shorts";
+    "{88ebde3a-4581-4c6b-8019-2a05a9e3e938}" = extension "hide-youtube-shorts";
   };
 in
 {
@@ -80,32 +73,28 @@ in
           Add = [
             {
               Name = "nixpkgs packages";
-              URLTemplate =
-                "https://search.nixos.org/packages?query={searchTerms}";
+              URLTemplate = "https://search.nixos.org/packages?query={searchTerms}";
               IconURL = "https://wiki.nixos.org/favicon.ico";
               Alias = "@np";
             }
 
             {
               Name = "NixOS options";
-              URLTemplate =
-                "https://search.nixos.org/options?query={searchTerms}";
+              URLTemplate = "https://search.nixos.org/options?query={searchTerms}";
               IconURL = "https://wiki.nixos.org/favicon.ico";
               Alias = "@no";
             }
 
             {
               Name = "NixOS Wiki";
-              URLTemplate =
-                "https://wiki.nixos.org/w/index.php?search={searchTerms}";
+              URLTemplate = "https://wiki.nixos.org/w/index.php?search={searchTerms}";
               IconURL = "https://wiki.nixos.org/favicon.ico";
               Alias = "@nw";
             }
 
             {
               Name = "noogle";
-              URLTemplate =
-                "https://noogle.dev/q?term={searchTerms}";
+              URLTemplate = "https://noogle.dev/q?term={searchTerms}";
               IconURL = "https://noogle.dev/favicon.ico";
               Alias = "@ng";
             }

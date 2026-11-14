@@ -82,13 +82,12 @@ in
         ];
       };
 
-    Preferences = {
-      "cookiebanners.service.mode.privateBrowsing" = 2; # Block cookie banners in private browsing
-      "cookiebanners.service.mode" = 2; # Block cookie banners
+      Preferences = {
+        "cookiebanners.service.mode.privateBrowsing" = 2; # Block cookie banners in private browsing
+        "cookiebanners.service.mode" = 2; # Block cookie banners
       };
     };
   };
 
-  environment.etc."firefox/policies/policies.json".target =
-    "librewolf/policies/policies.json";
+  environment.etc."firefox/policies/policies.json".target = "librewolf/policies/policies.json";
 }

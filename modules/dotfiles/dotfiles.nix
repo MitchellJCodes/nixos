@@ -1,4 +1,9 @@
-{ pkgs, username, dotfiles, ... }:
+{
+  pkgs,
+  username,
+  dotfiles,
+  ...
+}:
 
 {
   system.activationScripts.bootstrapDotfiles.text = ''

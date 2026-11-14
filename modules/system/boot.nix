@@ -16,7 +16,8 @@
     ];
 
     # kernelPackages = pkgs.linuxPackages_latest;
-    kernelPackages = pkgs.linuxKernel.packages.linux_7_2;
+    # kernelPackages = pkgs.linuxKernel.packages.linux_7_2;
+    kernelPackages = pkgs.linuxPackages_zen;
 
     loader = {
       efi.canTouchEfiVariables = true;
@@ -30,7 +31,7 @@
           terse: yes
           timeout: 0.25
         '';
-        
+
         style = {
           wallpapers = [ ./assets/boot_img2.png ];
           wallpaperStyle = "centered";

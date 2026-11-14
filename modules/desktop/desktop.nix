@@ -29,7 +29,6 @@
     GTK_THEME = "adw-gtk3-dark";
   };
 
-
   security.pam.services = {
     login.enableGnomeKeyring = true;
     greetd.enableGnomeKeyring = true;

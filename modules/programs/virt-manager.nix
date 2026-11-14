@@ -1,4 +1,9 @@
-{ config, pkgs, username, ... }:
+{
+  config,
+  pkgs,
+  username,
+  ...
+}:
 
 {
   # Virtualizaton
@@ -50,7 +55,7 @@
     "libvirtd"
     "kvm"
   ];
-  
+
   # Optional Features
 
   # Better USB support

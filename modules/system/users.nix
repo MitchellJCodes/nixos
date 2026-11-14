@@ -1,6 +1,7 @@
 { pkgs, username, ... }:
 
-with pkgs; {
+with pkgs;
+{
   users.users.${username} = {
     isNormalUser = true;
     description = username;
