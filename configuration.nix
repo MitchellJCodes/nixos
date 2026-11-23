@@ -13,6 +13,7 @@
     # ./modules/system/users-fish.nix
 
     # ./modules/hardware/nvidia.nix
+    # ./modules/hardware/nvidia-laptop.nix
     # ./modules/hardware/rog.nix
     ./modules/hardware/cardwired.nix
 

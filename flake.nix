@@ -29,7 +29,7 @@
     }:
     let
       hostname = "nixos-btw";
-      username = "mitch";
+      username = "USERNAME";
     in
     {
       nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {

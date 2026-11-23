@@ -5,13 +5,17 @@
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = true;
-    powerManagement.finegrained = true;
     nvidiaSettings = true;
-    open = true;
+    open = true; # false if legacy
 
-    # Driver package
+    # Latest 16XX/20XX or newer
     package = config.boot.kernelPackages.nvidiaPackages.latest;
+
+    # Legacy 10XX-9XX or older
+    # package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
   };
+
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   # CUDA binary cache
   nix.settings = {
@@ -24,29 +28,8 @@
     ];
   };
 
-  # Hybrid AMD + NVIDIA setup
-  services.xserver.videoDrivers = [
-    "amdgpu"
-    "nvidia"
-  ];
-
-  hardware.nvidia.prime = {
-    offload = {
-      enable = true;
-      enableOffloadCmd = true;
-    };
-
-    amdgpuBusId = "PCI:101:0:0";
-    nvidiaBusId = "PCI:1:0:0";
-  };
-
   # OBS support
   programs.obs-studio.package = pkgs.obs-studio.override {
     cudaSupport = true;
   };
-
-  # Enable NVIDIA S0ix power management
-  boot.extraModprobeConfig = ''
-    options nvidia NVreg_EnableS0ixPowerManagement=1
-  '';
 }
