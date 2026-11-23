@@ -34,7 +34,7 @@
       tldr
       ddcutil
       prettier
-      nixfmt
+      nixfmt-tree
       sl
 
       # Terminal
