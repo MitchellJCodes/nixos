@@ -9,9 +9,6 @@
   # General Packages
   environment.systemPackages =
     (with pkgs; [
-      # Desktop
-      gnome-session
-
       # CLI
       wl-clipboard
       eza
@@ -38,12 +35,10 @@
       ddcutil
       prettier
       nixfmt
+      sl
 
       # Terminal
       foot
-
-      # Files
-      nautilus
 
       # Theme
       bibata-cursors
@@ -63,17 +58,18 @@
       mpv
       snapshot
       rhythmbox
+      qalculate-gtk
       imv
       gparted
       audacity
       signal-desktop
       mousam
-      file-roller
+      xarchiver
       localsend
-      gnome-calculator
       system-config-printer
-      gnome-text-editor
       komikku
+      gearlever
+      comaps
 
       # Office
       kdePackages.okular
@@ -84,9 +80,6 @@
     ])
     ++ (with pkgs-stable; [
       # Stable packages (nixos-26.05)
-      gearlever
-      libguestfs
-      guestfs-tools
       #...
     ]);
 
@@ -96,13 +89,9 @@
     vimAlias = true;
   };
 
-  programs.lazygit.enable = true;
+  programs.evolution.enable = true;
 
-  # Nautilus
-  programs.nautilus-open-any-terminal = {
-    enable = true;
-    terminal = "foot";
-  };
+  programs.lazygit.enable = true;
 
   # OBS-Studio
   programs.obs-studio = {

@@ -1,4 +1,3 @@
-
 {
   description = "My Nixos Configuration";
 
@@ -11,44 +10,50 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    luciole.url = "github:noctalia-dev/luciole/cachix";
+
     dotfiles = {
       url = "github:mitchelljcodes/dotfiles";
       flake = false;
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    nixpkgs-stable,
-    dotfiles,
-    millennium,
-    ...
-  }:
-  let
-    hostname = "nixos-btw";
-    username = "USERNAME";
-  in {
-    nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      nixpkgs-stable,
+      dotfiles,
+      millennium,
+      ...
+    }:
+    let
+      hostname = "nixos-btw";
+      username = "mitch";
+    in
+    {
+      nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
 
-      specialArgs = {
-        inherit
-          dotfiles
-          hostname
-          username
-          nixpkgs-stable;
+        specialArgs = {
+          inherit
+            inputs
+            dotfiles
+            hostname
+            username
+            nixpkgs-stable
+            ;
+        };
+
+        modules = [
+          {
+            nixpkgs.overlays = [
+              millennium.overlays.default
+            ];
+          }
+          ./stable-packages.nix
+          ./configuration.nix
+        ];
       };
-
-      modules = [
-        {
-          nixpkgs.overlays = [
-            millennium.overlays.default
-          ];
-        }
-        ./stable-packages.nix
-        ./configuration.nix
-      ];
     };
-  };
 }

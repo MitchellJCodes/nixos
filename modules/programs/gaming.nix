@@ -1,11 +1,6 @@
 { pkgs, ... }:
 
 {
-  # Enable OpenGL
-  hardware.graphics = {
-    enable = true;
-  };
-
   # Enable Gamemode
   programs.gamemode.enable = true;
 

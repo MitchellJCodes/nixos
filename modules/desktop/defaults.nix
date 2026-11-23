@@ -13,8 +13,8 @@
       "application/xhtml+xml" = "librewolf.desktop";
 
       # File manager
-      "inode/directory" = "Nautilus.desktop";
-      "application/x-gnome-saved-search" = "Nautilus.desktop";
+      "inode/directory" = "luciole.desktop";
+      "application/x-gnome-saved-search" = "luciole.desktop";
 
       # Images
       "image/*" = "imv-dir.desktop";
@@ -27,8 +27,8 @@
       "image/vnd.djvu" = "org.kde.okular.desktop";
 
       # Text
-      "text/plain" = "org.gnome.TextEditor.desktop";
-      "text/markdown" = "org.gnome.TextEditor.desktop";
+      "text/plain" = "helix.desktop";
+      "text/markdown" = "helix.desktop";
 
       # Video
       "video/*" = "mpv.desktop";

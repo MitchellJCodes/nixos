@@ -17,7 +17,7 @@ in
       DisableTelemetry = true;
 
       ExtensionSettings = builtins.listToAttrs [
-        (extension "ublock-origin" "uBlock0@raymondhill.net")
+        (extension "ubird" "uBird@celenity.dev")
 
         (extension "darkreader" "addon@darkreader.org")
 

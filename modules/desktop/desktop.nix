@@ -1,6 +1,13 @@
 { pkgs, ... }:
 
 {
+
+  # Enable OpenGL
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   # Desktop / shell
   programs.umbriel.enable = true;
 
@@ -41,8 +48,17 @@
   # Hardware / power
   hardware.bluetooth.enable = true;
   hardware.i2c.enable = true;
-  services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
+  services.power-profiles-daemon.enable = true;
+
+  # Automatically switch power profiles based on AC/battery state
+  services.udev.extraRules = ''
+    # AC connected: balanced
+    ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set balanced"
+
+    # AC disconnected: power saver
+    ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ENV{POWER_SUPPLY_ONLINE}=="0", RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set power-saver"
+  '';
 
   # XDG portals
   xdg.portal = {

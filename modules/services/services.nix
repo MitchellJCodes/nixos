@@ -15,9 +15,6 @@
     webInterface = true;
   };
 
-  # Sushi
-  services.gnome.sushi.enable = true;
-
   # Flatpak
   services.flatpak.enable = true;
 
@@ -50,7 +47,8 @@
 
     script = ''
       flatpak install --system --noninteractive flathub \
-        com.github.tchx84.Flatseal
+        com.github.tchx84.Flatseal \
+        com.usebottles.bottles
     '';
 
     serviceConfig.Type = "oneshot";

@@ -25,7 +25,15 @@
   services.avahi = {
     enable = true;
     nssmdns4 = true;
-    openFirewall = true;
+    openFirewall = false;
+
+    settings = {
+      publish = {
+        "disable-publishing" = true;
+        "publish-addresses" = false;
+        "publish-workstation" = false;
+      };
+    };
   };
 
   # DNS
