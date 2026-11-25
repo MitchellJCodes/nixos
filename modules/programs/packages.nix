@@ -39,6 +39,7 @@
 
       # Terminal
       foot
+      # ghostty
 
       # Theme
       bibata-cursors

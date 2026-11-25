@@ -3,11 +3,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1794627719,
-        "narHash": "sha256-I9X+WHne80wZK4XQRUiC4Z2Gvf9n89olg0W7gmP8P+w=",
+        "lastModified": 1795618878,
+        "narHash": "sha256-K7OabsopTjwyEhh/aO7rIPZWYmboCn2jSCe00H1fcrY=",
         "owner": "mitchelljcodes",
         "repo": "dotfiles",
-        "rev": "e995fb9cab80b698ff2c6953011c8210f7529b4a",
+        "rev": "e04ae5d4e9bac13122e9326a23e8fa26f45b1d4b",
         "type": "github"
       },
       "original": {
@@ -21,11 +21,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1795360123,
-        "narHash": "sha256-7g1DKngzpaeIdCr+Y5YmvTghwXzUFlbsdKik0Xng3rM=",
+        "lastModified": 1795614537,
+        "narHash": "sha256-yaHoIDlCU1AYXGSSTHyrt9VpUnxfOXGK+wVzJPmhLzM=",
         "owner": "noctalia-dev",
         "repo": "luciole",
-        "rev": "264a22fce19604bed5a6c2be55fc8c586c7e631e",
+        "rev": "3aacdc52b7f7278d27bc0bab4c342c95222c5e42",
         "type": "github"
       },
       "original": {
@@ -107,11 +107,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1795258312,
-        "narHash": "sha256-IEuDsf80ubivfpidbRsIm30HVo7PZIdZt1stRsbaY4Y=",
+        "lastModified": 1795370043,
+        "narHash": "sha256-s/0jq8usZtLVOolYBwmyUmd3JsfAu7w3FU+a0dgMqSY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "94c3211b0ee8ba969a3f12eb4aff8ba0f72971dd",
+        "rev": "0dc498bfe49baeb18b0f9891e800b53bb2603193",
         "type": "github"
       },
       "original": {
