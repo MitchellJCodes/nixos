@@ -28,7 +28,6 @@
       ...
     }:
     let
-      hostname = "desktop";
       username = "mitch";
     in
     {
