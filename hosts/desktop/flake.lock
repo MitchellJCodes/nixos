@@ -3,11 +3,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1795618878,
-        "narHash": "sha256-K7OabsopTjwyEhh/aO7rIPZWYmboCn2jSCe00H1fcrY=",
+        "lastModified": 1795620198,
+        "narHash": "sha256-z4lgNfjIeDCyikc6iOhWubyg0o7UPNot0cwtS0ux1XI=",
         "owner": "mitchelljcodes",
         "repo": "dotfiles",
-        "rev": "e04ae5d4e9bac13122e9326a23e8fa26f45b1d4b",
+        "rev": "4442117238eee8c3ac1205ea2d8c481b5a6f8e27",
         "type": "github"
       },
       "original": {
@@ -21,11 +21,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1795614537,
-        "narHash": "sha256-yaHoIDlCU1AYXGSSTHyrt9VpUnxfOXGK+wVzJPmhLzM=",
+        "lastModified": 1795801582,
+        "narHash": "sha256-I89k8HiKFeJacJlXMSOJ3qrxQ3Zrk1Yu1kBKFTvWtO8=",
         "owner": "noctalia-dev",
         "repo": "luciole",
-        "rev": "3aacdc52b7f7278d27bc0bab4c342c95222c5e42",
+        "rev": "c91150b41dab0eac403800e8d005946d8f1fd68c",
         "type": "github"
       },
       "original": {
