@@ -29,7 +29,7 @@
     }:
     let
       hostname = "nixos-desktop";
-      username = "USERNAME";
+      username = "mitch";
     in
     {
       nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
