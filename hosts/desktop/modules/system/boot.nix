@@ -9,6 +9,8 @@
 
     consoleLogLevel = 3;
 
+    initrd.verbose = false;
+
     kernelParams = [
       "quiet"
       "rd.udev.log_level=3"
@@ -20,29 +22,9 @@
     loader = {
       efi.canTouchEfiVariables = true;
 
-      limine = {
-        enable = true;
-        maxGenerations = 10;
+      timeout = 0;
 
-        extraConfig = ''
-          quiet: yes
-          terse: yes
-          timeout: 0.25
-        '';
-
-        style = {
-          wallpapers = [ ./assets/boot_img2.png ];
-          wallpaperStyle = "centered";
-          # backdrop = "000000";
-
-          interface = {
-            branding = "";
-            brandingColor = "FFFFFF";
-            helpHidden = true;
-            helpColor = "FFFFFF";
-            helpColorBright = "FFFFFF";
-          };
-        };
+      systemd-boot.enable = true;
       };
     };
   };
