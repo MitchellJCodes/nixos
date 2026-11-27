@@ -13,7 +13,7 @@
     # ./modules/system/users-fish.nix
 
     # ./modules/hardware/nvidia.nix
-    # ./modules/hardware/nvidia-laptop.nix
+    ./modules/hardware/nvidia-laptop.nix
     # ./modules/hardware/rog.nix
     ./modules/hardware/cardwired.nix
 
@@ -28,9 +28,9 @@
     ./modules/programs/gaming.nix
     ./modules/programs/packages.nix
     ./modules/programs/thunderbird.nix
-    # ./modules/programs/virt-manager.nix
+    ./modules/programs/virt-manager.nix
 
-    # ./modules/services/howdy.nix
+    ./modules/services/howdy.nix
     ./modules/services/services.nix
 
     ./modules/dotfiles/dotfiles.nix

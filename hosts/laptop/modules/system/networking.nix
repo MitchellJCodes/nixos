@@ -1,8 +1,8 @@
-{ hostname, ... }:
+{ ... }:
 
 {
   networking = {
-    hostName = hostname;
+    hostName = "nixos-laptop";
 
     networkmanager = {
       enable = true;

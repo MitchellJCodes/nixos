@@ -1,5 +1,5 @@
 {
-  description = "My Nixos Configuration";
+  description = "My Nixos Nvidia Laptop Configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -28,18 +28,16 @@
       ...
     }:
     let
-      hostname = "nixos-desktop";
       username = "mitch";
     in
     {
-      nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.nvidia-laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = {
           inherit
             inputs
             dotfiles
-            hostname
             username
             nixpkgs-stable
             ;
