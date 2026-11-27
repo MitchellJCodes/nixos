@@ -28,7 +28,7 @@
       ...
     }:
     let
-      hostname = "nixos-btw";
+      hostname = "nixos-desktop";
       username = "USERNAME";
     in
     {
