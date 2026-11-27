@@ -15,6 +15,9 @@
     webInterface = true;
   };
 
+  # GNOME services used by desktop applications
+  services.gnome.gnome-keyring.enable = true;
+
   # Flatpak
   services.flatpak.enable = true;
 

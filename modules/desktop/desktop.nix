@@ -27,9 +27,6 @@
   services.gvfs.enable = true;
   programs.dconf.enable = true;
 
-  # GNOME services used by desktop applications
-  services.gnome.gnome-keyring.enable = true;
-
   # Environment variables
   environment.sessionVariables = {
     QT_QPA_PLATFORMTHEME = "qt6ct";

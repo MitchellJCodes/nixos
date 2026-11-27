@@ -38,8 +38,8 @@
       sl
 
       # Terminal
-      foot
-      # ghostty
+      # foot
+      ghostty
 
       # Theme
       bibata-cursors
@@ -47,6 +47,7 @@
       adw-gtk3
       nwg-look
       kdePackages.qt6ct
+      mpvpaper
 
       # Shell
       starship
@@ -71,6 +72,7 @@
       komikku
       gearlever
       comaps
+      seahorse
 
       # Office
       kdePackages.okular
@@ -84,6 +86,11 @@
       #...
     ]);
 
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+    
   programs.neovim = {
     enable = true;
     viAlias = true;

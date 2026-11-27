@@ -15,7 +15,7 @@
       "rd.systemd.show_status=auto"
     ];
 
-    # kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_latest;
 
     loader = {
       efi.canTouchEfiVariables = true;
