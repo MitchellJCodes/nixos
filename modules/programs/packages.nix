@@ -57,7 +57,6 @@
       zellij
 
       # Applications
-      bazaar
       mpv
       snapshot
       rhythmbox
