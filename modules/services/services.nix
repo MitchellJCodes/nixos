@@ -18,45 +18,6 @@
   # GNOME services used by desktop applications
   services.gnome.gnome-keyring.enable = true;
 
-  # Flatpak
-  services.flatpak.enable = true;
-
-  systemd.services.flatpak-repo = {
-    description = "Add Flathub Flatpak repository";
-
-    after = [ "network-online.target" ];
-    wants = [ "network-online.target" ];
-    wantedBy = [ "multi-user.target" ];
-
-    path = [ pkgs.flatpak ];
-
-    script = ''
-      flatpak remote-add --if-not-exists \
-        flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-    '';
-
-    serviceConfig.Type = "oneshot";
-  };
-
-  # Force-install required Flatpaks
-  systemd.services.flatpak-install = {
-    description = "Install required Flatpak applications";
-
-    after = [ "flatpak-repo.service" ];
-    requires = [ "flatpak-repo.service" ];
-    wantedBy = [ "multi-user.target" ];
-
-    path = [ pkgs.flatpak ];
-
-    script = ''
-      flatpak install --system --noninteractive flathub \
-        com.github.tchx84.Flatseal \
-        com.usebottles.bottles
-    '';
-
-    serviceConfig.Type = "oneshot";
-  };
-
   # AppImage
   programs.appimage = {
     enable = true;
