@@ -4,7 +4,6 @@
   imports = [
     # Shared modules
     ../../modules/system/audio.nix
-    ../../modules/system/boot.nix
     ../../modules/system/greeter.nix
     ../../modules/system/swap.nix
     ../../modules/system/users.nix
