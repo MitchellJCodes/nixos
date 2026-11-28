@@ -10,6 +10,7 @@
   environment.systemPackages =
     (with pkgs; [
       # CLI
+      gcc
       wl-clipboard
       eza
       btop
